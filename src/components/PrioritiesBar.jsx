@@ -1,6 +1,6 @@
 import { Grid, Paper, Avatar, Typography } from "@mui/material";
 
-const PrioritiesBar = () => {
+const PrioritiesBar = (props) => {
   const priorities = [
     {
       title: "DATA & RESEARCH",
@@ -52,7 +52,11 @@ const PrioritiesBar = () => {
                     />
                     <Typography
                       fontWeight="bold"
-                      sx={{ color: "#1B3A61", fontSize: 12, paddingTop: 1.5 }}
+                      sx={{
+                        color: props.headerColor,
+                        fontSize: 12,
+                        paddingTop: 1.5,
+                      }}
                     >
                       {priority.title}
                     </Typography>

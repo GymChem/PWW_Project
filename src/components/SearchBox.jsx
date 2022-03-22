@@ -8,7 +8,7 @@ const styles = {
   },
 };
 
-const SearchBox = () => {
+const SearchBox = (props) => {
   return (
     <Paper style={styles.paperContainer}>
       <Grid
@@ -19,28 +19,27 @@ const SearchBox = () => {
         height="100%"
         width="100%"
       >
-        <Grid item width="50%">
-          <Typography variant="h6" style={{ color: "#F7F4ED" }}>
+        <Grid item width="40%">
+          <Typography variant="h4" style={{ color: "#F7F4ED" }}>
             Providing independent research, analysis, and resources to
             facilitate informed policy decisions and adminstration of services
           </Typography>
         </Grid>
-        <Grid item width="50%">
+        <Grid item width="40%">
           <Grid
             container
             direction="row"
             alignItems="center"
             justifyContent="space-between"
-            sx={{ display: "flex" }}
           >
-            <Grid item>
+            <Grid item width="75%">
               <TextField
                 label={
                   <Typography style={{ fontStyle: "italic" }}>
                     Search rfa.sc.gov
                   </Typography>
                 }
-                sx={{ backgroundColor: "#F3F6F9", width: "180%" }}
+                sx={{ backgroundColor: "#F3F6F9", width: "100%" }}
                 variant="outlined"
               />
             </Grid>
@@ -49,8 +48,8 @@ const SearchBox = () => {
                 aria-label="Search button"
                 variant="contained"
                 sx={{
-                  backgroundColor: "#0074C1",
-                  color: "#F7F4ED",
+                  backgroundColor: props.buttonFill,
+                  color: props.buttonText,
                 }}
               >
                 Search
