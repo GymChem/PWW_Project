@@ -57,12 +57,21 @@ const RecentUpdates = (props) => {
         return (
           <Grid item key={ind} padding={1}>
             <Link href="#">
-              <Typography color={props.linkColor} align="left">
+              <Typography
+                paddingRight={12}
+                color={props.linkColor}
+                align="left"
+              >
                 {item.link}
               </Typography>
             </Link>
             {item.blurb && (
-              <Typography variant="body2" color={props.headerColor}>
+              <Typography
+                align="left"
+                variant="body2"
+                paddingRight={12}
+                color={props.headerColor}
+              >
                 {item.blurb}
               </Typography>
             )}
