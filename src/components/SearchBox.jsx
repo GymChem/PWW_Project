@@ -52,8 +52,18 @@ const SearchBox = (props) => {
                   color: props.buttonText,
                 }}
               >
-                Search
-                <SearchIcon />
+                <Grid
+                  container
+                  direction="row"
+                  alignItems="center"
+                  spacing={0.75}
+                >
+                  <Grid item> Search</Grid>
+                  <Grid item>
+                    {" "}
+                    <SearchIcon />
+                  </Grid>
+                </Grid>
               </Button>
             </Grid>
           </Grid>

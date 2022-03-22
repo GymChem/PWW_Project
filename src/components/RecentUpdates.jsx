@@ -45,7 +45,7 @@ const RecentUpdates = (props) => {
           Recent Updates
         </Typography>
       </Grid>
-      <Grid item width="3%" paddingBottom={2}>
+      <Grid item width="6%" paddingBottom={2}>
         <Box
           style={{
             backgroundColor: props.goldHighlight,
