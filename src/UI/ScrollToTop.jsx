@@ -1,6 +1,7 @@
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Fab, Typography, Grid, Button } from "@mui/material";
 import { useEffect, useState } from "react";
+import { buttonFill } from "../data/Globals";
 
 const ScrollToTop = (props) => {
   const [show, setShow] = useState(props.showBelow ? false : true);
@@ -57,7 +58,7 @@ const ScrollToTop = (props) => {
                 right: "5%",
               }}
             >
-              <KeyboardArrowUpIcon sx={{ color: props.buttonFill }} />
+              <KeyboardArrowUpIcon sx={{ color: buttonFill }} />
             </Fab>
           </Grid>
         </Grid>

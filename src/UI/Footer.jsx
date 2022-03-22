@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
 import { AppBar, Container, Grid, Typography, Avatar } from "@mui/material";
-import { locations, bottomLinks } from "../TestData";
+import { locations, bottomLinks } from "../data/TestData";
+import { headerColor } from "../data/Globals";
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <AppBar
       position="static"
       sx={{
         top: "auto",
         bottom: 0,
-        backgroundColor: props.headerColor,
+        backgroundColor: headerColor,
         padding: 2,
       }}
     >

@@ -1,5 +1,12 @@
 import { Button, Box, Grid, Typography, Link } from "@mui/material";
-import { updateList } from "../TestData";
+import { updateList } from "../data/TestData";
+import {
+  linkColor,
+  headerColor,
+  goldHighlight,
+  buttonFill,
+  buttonText,
+} from "../data/Globals";
 
 const RecentUpdates = (props) => {
   return (
@@ -10,18 +17,14 @@ const RecentUpdates = (props) => {
       justifyContent="center"
     >
       <Grid item>
-        <Typography
-          variant="h5"
-          fontWeight="bold"
-          sx={{ color: props.headerColor }}
-        >
+        <Typography variant="h5" fontWeight="bold" sx={{ color: headerColor }}>
           Recent Updates
         </Typography>
       </Grid>
       <Grid item width="6%" paddingBottom={2}>
         <Box
           style={{
-            backgroundColor: props.goldHighlight,
+            backgroundColor: goldHighlight,
             height: 4,
           }}
         />
@@ -30,11 +33,7 @@ const RecentUpdates = (props) => {
         return (
           <Grid item key={ind} padding={1}>
             <Link href="#">
-              <Typography
-                paddingRight={12}
-                color={props.linkColor}
-                align="left"
-              >
+              <Typography paddingRight={12} color={linkColor} align="left">
                 {item.link}
               </Typography>
             </Link>
@@ -43,7 +42,7 @@ const RecentUpdates = (props) => {
                 align="left"
                 variant="body2"
                 paddingRight={12}
-                color={props.headerColor}
+                color={headerColor}
               >
                 {item.blurb}
               </Typography>
@@ -53,7 +52,7 @@ const RecentUpdates = (props) => {
                 <Typography
                   fontWeight="bold"
                   variant="body2"
-                  color={props.headerColor}
+                  color={headerColor}
                 >
                   Published:
                 </Typography>
@@ -77,8 +76,8 @@ const RecentUpdates = (props) => {
           aria-label="View more recent updates button"
           variant="contained"
           sx={{
-            backgroundColor: props.buttonFill,
-            color: props.buttonText,
+            backgroundColor: buttonFill,
+            color: buttonText,
           }}
         >
           {" "}

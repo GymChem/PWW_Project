@@ -1,7 +1,8 @@
 import { Box, Grid, Typography, Link } from "@mui/material";
-import { links } from "../TestData";
+import { links } from "../data/TestData";
+import { linkColor, headerColor } from "../data/Globals";
 
-const PopularLinks = (props) => {
+const PopularLinks = () => {
   return (
     <>
       <Grid
@@ -15,7 +16,7 @@ const PopularLinks = (props) => {
             align="left"
             variant="h4"
             fontWeight="bold"
-            sx={{ color: props.headerColor, paddingTop: 1.5 }}
+            sx={{ color: headerColor, paddingTop: 1.5 }}
           >
             POPULAR SERVICES AND LINKS
           </Typography>
@@ -41,7 +42,7 @@ const PopularLinks = (props) => {
                   paddingRight={2}
                 >
                   <Link href="#">
-                    <Typography color={props.linkColor} align="left">
+                    <Typography color={linkColor} align="left">
                       {link}
                     </Typography>
                   </Link>

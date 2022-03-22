@@ -1,5 +1,6 @@
 import { Button, Box, Paper, Grid, Typography, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { buttonFill, buttonText } from "../data/Globals";
 
 const styles = {
   paperContainer: {
@@ -48,8 +49,8 @@ const SearchBox = (props) => {
                 aria-label="Search button"
                 variant="contained"
                 sx={{
-                  backgroundColor: props.buttonFill,
-                  color: props.buttonText,
+                  backgroundColor: buttonFill,
+                  color: buttonText,
                 }}
               >
                 <Grid

@@ -5,6 +5,7 @@ import ScrollToTop from "./ScrollToTop";
 import PopularLinks from "../components/PopularLinks";
 import { useRef } from "react";
 import Footer from "./Footer";
+import { buttonFill } from "../data/Globals";
 
 const BottomHalfPage = (props) => {
   const scrollEndRef = useRef(null);
@@ -20,13 +21,7 @@ const BottomHalfPage = (props) => {
         justifyContent="center"
       >
         <Grid item width="80%" paddingBottom={2}>
-          <PopularLinks
-            headerColor={props.headerColor}
-            goldHighlight={props.goldHighlight}
-            linkColor={props.linkColor}
-            buttonFill={props.buttonFill}
-            buttonText={props.buttonText}
-          />
+          <PopularLinks />
         </Grid>
         <Grid item width="80%">
           <Grid
@@ -37,28 +32,17 @@ const BottomHalfPage = (props) => {
             paddingTop={4}
           >
             <Grid item width="50%">
-              <RecentUpdates
-                headerColor={props.headerColor}
-                goldHighlight={props.goldHighlight}
-                linkColor={props.linkColor}
-                buttonFill={props.buttonFill}
-                buttonText={props.buttonText}
-              />
+              <RecentUpdates />
             </Grid>
             <Grid item width="50%">
-              <EventsCalendar
-                headerColor={props.headerColor}
-                buttonFill={props.buttonFill}
-                buttonText={props.buttonText}
-                goldHighlight={props.goldHighlight}
-              />
+              <EventsCalendar />
             </Grid>
             <div ref={scrollEndRef} />
-            <ScrollToTop showBelow={250} buttonFill={props.buttonFill} />
+            <ScrollToTop showBelow={250} buttonFill={buttonFill} />
           </Grid>
-          <Footer headerColor={props.headerColor} />
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };

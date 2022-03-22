@@ -1,5 +1,6 @@
 import { Grid, Paper, Avatar, Typography } from "@mui/material";
-import { priorities } from "../TestData";
+import { priorities } from "../data/TestData";
+import { headerColor } from "../data/Globals";
 
 const PrioritiesBar = (props) => {
   return (
@@ -32,7 +33,7 @@ const PrioritiesBar = (props) => {
                     <Typography
                       fontWeight="bold"
                       sx={{
-                        color: props.headerColor,
+                        color: headerColor,
                         fontSize: 12,
                         paddingTop: 1.5,
                       }}

@@ -125,3 +125,56 @@ export const bottomLinks = [
   { name: "Accessibility" },
   { name: "Contact Us" },
 ];
+
+export const mainNav = [
+  "Home",
+  "News & Events",
+  "About Us",
+  "Contact Us",
+  "Boards & Committees",
+];
+export const allNavOptions = [
+  {
+    title: "DATA & RESEARCH",
+    subsections: [
+      "Economy",
+      "State Finances",
+      "Education",
+      "Healthcare",
+      "Local Government",
+      "Population and Demographics",
+      "State Register Calculations",
+      "Presentations",
+    ],
+  },
+  {
+    title: "GEOGRAPHY & MAPPING",
+    subsections: [
+      "Transortation Carrier Network (Uber)",
+      "SC Real Time Network",
+      "SC State GIS",
+      "Maps",
+      "Interactive Mapping",
+      "Statewide Aerial Imagery",
+    ],
+  },
+  {
+    title: "PROGRAMS & SERVICES",
+    subsection: [
+      "Precinct Demographics and Redistricting",
+      "State 911 Program",
+      "Data Services and Online Solutions",
+      "Geodectic Survey",
+      "Fiscal Analysis",
+      "2020 Census",
+    ],
+  },
+  {
+    title: "LEGISLATIVE FISCAL IMPACTS",
+    subsections: [
+      "Current General Assembly Session",
+      "Previous General Assembly Session",
+      "Forms",
+    ],
+  },
+];
