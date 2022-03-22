@@ -1,34 +1,7 @@
 import { Button, Box, Grid, Typography, Link } from "@mui/material";
+import { updateList } from "../TestData";
 
 const RecentUpdates = (props) => {
-  const updateList = [
-    {
-      link: "Local Government Finance",
-      blurb:
-        "Vestibulum rutrum quam vitae frigilla tincidunt, Suspendisse nec tortor urna, Ut laoreet sodales",
-      pubDate: "Jan 2, 2020",
-      status: "Updated",
-    },
-    {
-      link: "Transportation Network Carrier Maps",
-      pubDate: "Jan 2, 2020",
-      status: "New",
-    },
-    {
-      link: "BEA Long-Range General Fund Revenue Plan for FY 2019-20 to FY 2022-23",
-      pubDate: "Dec 16, 2019",
-      blurb:
-        "Vestibulum rutrum quam vitae frigilla tincidunt, Suspendisse nec tortor urna, Ut laoreet sodales",
-      pubDate: "Jan 2, 2020",
-      status: "Updated",
-    },
-    { link: "Budget Development", pubDate: "Dec 16, 2019", status: "New" },
-    {
-      link: "November 2019 General Fund Revenue Digest",
-      pubDate: "Dec 13, 2019",
-      status: "New",
-    },
-  ];
   return (
     <Grid
       container

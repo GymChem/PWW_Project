@@ -1,32 +1,8 @@
 import styled from "@emotion/styled";
 import { AppBar, Container, Grid, Typography, Avatar } from "@mui/material";
+import { locations, bottomLinks } from "../TestData";
 
 const Footer = (props) => {
-  const bottomLinks = [
-    { name: "Privacy Statement" },
-    { name: "FOIA" },
-    { name: "Disclosures and Reporting" },
-    { name: "Report Fraud" },
-    { name: "Accessibility" },
-    { name: "Contact Us" },
-  ];
-  const locations = [
-    {
-      place: "MAIN OFFICE",
-      address:
-        "1000 Assembly Street Rembert Dennis Building Suite 421 Columbia, SC 29201",
-      phone: "(803) 734-3793",
-    },
-    {
-      place: "GEODETIC SURVERY SECTION",
-      address: "5 Geology Road Columbia, SC 29212",
-    },
-    {
-      place: "HEALTH AND DEMOGRAPHICS DIVISION",
-      address:
-        "1000 Assembly Street Rembert Dennis Building, Suite 240 Columbia, SC 29201",
-    },
-  ];
   return (
     <AppBar
       position="static"

@@ -1,28 +1,7 @@
 import { Grid, Paper, Avatar, Typography } from "@mui/material";
+import { priorities } from "../TestData";
 
 const PrioritiesBar = (props) => {
-  const priorities = [
-    {
-      title: "DATA & RESEARCH",
-      path: "assets/Data-Research-Icon.svg",
-      alt: "data and research icon picture of bar graph",
-    },
-    {
-      title: "GEOGRAPHY & MAPPING",
-      path: "assets/Geography-Icon.svg",
-      alt: "geography and mapping icon picture of a globe",
-    },
-    {
-      title: "PROGRAMS & SERVICES",
-      path: "assets/Programs-Icon.svg",
-      alt: "programs and services icon list with first paragraphy highlighted",
-    },
-    {
-      title: "LEGISLATIVE FISCAL IMPACTS",
-      path: "assets/Legislative-Icon.svg",
-      alt: "legislative fiscal impacts icon list picture of money bag and calculator",
-    },
-  ];
   return (
     <>
       <Paper style={{ backgroundColor: "#CCCCCC" }}>

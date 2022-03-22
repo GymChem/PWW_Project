@@ -2,44 +2,9 @@ import { Button, Box, Grid, Typography } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import { events } from "../TestData";
 
 const EventsCalendar = (props) => {
-  const events = [
-    {
-      month: "NOV",
-      day: "22",
-      title: "Board of Economic Advisors Meeting",
-      updateStatus: "Updated",
-      location: "Room 417, Bowers Conference Room, Rembert Dennis Building",
-      time: "1:30 pm",
-      phoneNum: "(803) 734-2265",
-    },
-    {
-      month: "NOV",
-      day: "23",
-      updateStatus: "Cancelled",
-      title: "Board of Economic Advisors Meeting",
-      location: "Room 417, Bowers Conference Room, Rembert Dennis Building",
-      time: "1:30 pm",
-      phoneNum: "(803) 734-2265",
-    },
-    {
-      month: "NOV",
-      day: "25",
-      title: "Board of Economic Advisors Meeting",
-      location: "Room 417, Bowers Conference Room, Rembert Dennis Building",
-      time: "1:30 pm",
-      phoneNum: "(803) 734-2265",
-    },
-    {
-      month: "NOV",
-      day: "28",
-      title: "Board of Economic Advisors Meeting",
-      location: "Room 417, Bowers Conference Room, Rembert Dennis Building",
-      time: "1:30 pm",
-      phoneNum: "(803) 734-2265",
-    },
-  ];
   const boxColorFunc = (status) => {
     if (status === "Updated") {
       return "#D2B859";
