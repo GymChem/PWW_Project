@@ -136,7 +136,7 @@ export const mainNav = [
 export const allNavOptions = [
   {
     title: "DATA & RESEARCH",
-    subsections: [
+    subsection: [
       "Economy",
       "State Finances",
       "Education",
@@ -149,7 +149,7 @@ export const allNavOptions = [
   },
   {
     title: "GEOGRAPHY & MAPPING",
-    subsections: [
+    subsection: [
       "Transortation Carrier Network (Uber)",
       "SC Real Time Network",
       "SC State GIS",
@@ -171,7 +171,7 @@ export const allNavOptions = [
   },
   {
     title: "LEGISLATIVE FISCAL IMPACTS",
-    subsections: [
+    subsection: [
       "Current General Assembly Session",
       "Previous General Assembly Session",
       "Forms",
