@@ -6,6 +6,7 @@ import {
   IconButton,
   Button,
   Typography,
+  Fab,
   Avatar,
 } from "@mui/material";
 import * as React from "react";
@@ -14,6 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import NavMenu from "../UI/NavMenu";
+import MenuButton from "./MenuButton";
 import { headerColor } from "../data/Globals";
 
 const CustomAppBar = (props) => {
@@ -50,39 +52,7 @@ const CustomAppBar = (props) => {
                       justifyContent="flex-start"
                     >
                       <Grid item>
-                        <Button
-                          onClick={(e) => {
-                            if (e.type === "click") {
-                              setOpen(!open);
-                            }
-                          }}
-                          size="large"
-                          edge="start"
-                          aria-label="Open Drawer"
-                          sx={{
-                            backgroundColor: "#0074C1",
-                            color: "#F7F4ED",
-                            flexDirection: "column",
-                            mr: 2,
-                            //   ...(open && { display: "none" }),
-                          }}
-                        >
-                          {!open ? (
-                            <>
-                              <MenuIcon aria-label="menu icon" />
-                              <Typography sx={{ fontSize: 10 }}>
-                                Menu
-                              </Typography>
-                            </>
-                          ) : (
-                            <>
-                              <CloseIcon aria-label="close icon" />
-                              <Typography sx={{ fontSize: 10 }}>
-                                Close
-                              </Typography>
-                            </>
-                          )}
-                        </Button>
+                        <MenuButton open={open} setOpen={setOpen} />
                       </Grid>
                       <Grid item paddingRight={2}>
                         <Avatar
