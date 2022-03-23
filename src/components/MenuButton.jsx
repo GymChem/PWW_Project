@@ -43,6 +43,7 @@ const MenuButton = (props) => {
       edge="start"
       aria-label="Open Nav Drawer"
       sx={{
+        height: 65,
         backgroundColor: buttonFill,
         color: buttonText,
         flexDirection: "column",

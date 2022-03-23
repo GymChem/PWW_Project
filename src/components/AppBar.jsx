@@ -3,30 +3,18 @@ import {
   Box,
   Toolbar,
   Grid,
-  IconButton,
   Button,
   Typography,
-  Fab,
   Avatar,
 } from "@mui/material";
 import * as React from "react";
 import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import NavMenu from "../UI/NavMenu";
 import MenuButton from "./MenuButton";
-import { headerColor } from "../data/Globals";
 
-const CustomAppBar = (props) => {
+const CustomAppBar = () => {
   const [open, setOpen] = useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -35,8 +23,8 @@ const CustomAppBar = (props) => {
           position="static"
           sx={{ backgroundColor: "#F3F6F9" }}
         >
-          <Toolbar>
-            <Grid container direction="column">
+          <Toolbar disableGutters>
+            <Grid container direction="column" justifyContent="flex-start">
               <Grid item>
                 <Grid
                   container
@@ -48,7 +36,7 @@ const CustomAppBar = (props) => {
                     <Grid
                       container
                       direction="row"
-                      alignItems="center"
+                      alignItems="flex-start"
                       justifyContent="flex-start"
                     >
                       <Grid item>
@@ -150,12 +138,6 @@ const CustomAppBar = (props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      {/* <NavMenu
-        handleDrawerOpen={handleDrawerOpen}
-        handleDrawerClose={handleDrawerClose}
-        open={open}
-        setOpen={setOpen}
-      /> */}
     </>
   );
 };
