@@ -1,6 +1,7 @@
 import { Button, Box, Paper, Grid, Typography, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { buttonFill, buttonText } from "../data/Globals";
+import { CustomButton } from "./MenuButton";
 
 const styles = {
   paperContainer: {
@@ -45,27 +46,24 @@ const SearchBox = (props) => {
               />
             </Grid>
             <Grid item>
-              <Button
-                aria-label="Search button"
-                variant="contained"
-                sx={{
-                  backgroundColor: buttonFill,
-                  color: buttonText,
-                }}
-              >
-                <Grid
-                  container
-                  direction="row"
-                  alignItems="center"
-                  spacing={0.75}
-                >
-                  <Grid item> Search</Grid>
-                  <Grid item>
-                    {" "}
-                    <SearchIcon />
+              <CustomButton
+                ariaLabel={"search button"}
+                buttonDisplay={
+                  <Grid
+                    container
+                    direction="row"
+                    alignItems="center"
+                    spacing={0.75}
+                  >
+                    <Grid item> Search</Grid>
+                    <Grid item>
+                      {" "}
+                      <SearchIcon />
+                    </Grid>
                   </Grid>
-                </Grid>
-              </Button>
+                }
+                size="medium"
+              />
             </Grid>
           </Grid>
         </Grid>

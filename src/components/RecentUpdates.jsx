@@ -7,6 +7,7 @@ import {
   buttonFill,
   buttonText,
 } from "../data/Globals";
+import { CustomButton } from "./MenuButton";
 
 const RecentUpdates = (props) => {
   return (
@@ -72,17 +73,11 @@ const RecentUpdates = (props) => {
         );
       })}
       <Grid item>
-        <Button
-          aria-label="View more recent updates button"
-          variant="contained"
-          sx={{
-            backgroundColor: buttonFill,
-            color: buttonText,
-          }}
-        >
-          {" "}
-          View More
-        </Button>
+        <CustomButton
+          buttonDisplay="View More"
+          ariaLabel="View more recent updates button"
+          size="medium"
+        />
       </Grid>
     </Grid>
   );

@@ -8,6 +8,29 @@ import {
   buttonText,
 } from "../data/Globals";
 
+export const CustomButton = (props) => {
+  return (
+    <Button
+      onClick={props.onClickFunction}
+      size={props.size}
+      aria-label={props.ariaLabel}
+      sx={{
+        backgroundColor: buttonFill,
+        color: buttonText,
+        mr: 2,
+        "&:hover": {
+          backgroundColor: buttonHoverFill,
+        },
+        "&:active": {
+          backgroundColor: buttonClickFill,
+        },
+      }}
+    >
+      {props.buttonDisplay}
+    </Button>
+  );
+};
+
 const MenuButton = (props) => {
   return (
     <Button

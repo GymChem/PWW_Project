@@ -9,6 +9,7 @@ import {
   buttonFill,
   buttonText,
 } from "../data/Globals";
+import { CustomButton } from "./MenuButton";
 
 const EventsCalendar = (props) => {
   const boxColorFunc = (status) => {
@@ -132,17 +133,11 @@ const EventsCalendar = (props) => {
           </Grid>
         </Grid>
         <Grid item>
-          <Button
-            aria-label="View all events button"
-            variant="contained"
-            sx={{
-              backgroundColor: buttonFill,
-              color: buttonText,
-            }}
-          >
-            {" "}
-            VIEW ALL EVENTS
-          </Button>
+          <CustomButton
+            buttonDisplay="View all Events"
+            ariaLabel="View all events button"
+            size="medium"
+          />
         </Grid>
       </Grid>
     </>
