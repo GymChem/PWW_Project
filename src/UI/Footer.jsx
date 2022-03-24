@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { AppBar, Container, Grid, Typography, Avatar } from "@mui/material";
 import { locations, bottomLinks } from "../data/TestData";
 import { headerColor } from "../data/Globals";
+import { NavLink } from "react-router-dom";
+import classes from "../UI/Links.module.css";
 
 const Footer = () => {
   return (
@@ -46,9 +48,11 @@ const Footer = () => {
               {bottomLinks.map((link, ind) => {
                 return (
                   <Grid item key={ind}>
-                    <Typography align="left" color="#F3F6F9">
-                      {link.name}
-                    </Typography>
+                    <NavLink className={classes.navlink} to={link.link}>
+                      <Typography align="left" color="#F3F6F9">
+                        {link.name}
+                      </Typography>
+                    </NavLink>
                   </Grid>
                 );
               })}

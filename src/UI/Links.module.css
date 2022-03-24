@@ -1,8 +1,7 @@
 a {
   text-decoration: none;
-  color: #1b3a61;
 }
 a.navlink:hover {
   text-decoration: underline;
-  border-bottom: #1b3a61;
+  color: inherit;
 }

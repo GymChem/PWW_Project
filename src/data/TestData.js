@@ -118,12 +118,12 @@ export const locations = [
 ];
 
 export const bottomLinks = [
-  { name: "Privacy Statement" },
-  { name: "FOIA" },
-  { name: "Disclosures and Reporting" },
-  { name: "Report Fraud" },
-  { name: "Accessibility" },
-  { name: "Contact Us" },
+  { name: "Privacy Statement", link: "/placeholder" },
+  { name: "FOIA", link: "/placeholder" },
+  { name: "Disclosures and Reporting", link: "/placeholder" },
+  { name: "Report Fraud", link: "/placeholder" },
+  { name: "Accessibility", link: "/placeholder" },
+  { name: "Contact Us", link: "/placeholder" },
 ];
 
 export const mainNav = [

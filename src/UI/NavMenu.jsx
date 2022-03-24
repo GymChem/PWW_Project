@@ -25,7 +25,7 @@ const MyList = () => {
           >
             {mainNav.map((nav, ind) => {
               return (
-                <Grid item key={ind} sx={{ width: 250 }}>
+                <Grid item key={ind} sx={{ width: 250 }} color={headerColor}>
                   <ListItem>
                     <NavLink className={classes.navlink} to={nav.link}>
                       <Typography
