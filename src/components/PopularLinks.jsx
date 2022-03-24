@@ -24,7 +24,7 @@ const PopularLinks = () => {
           </Typography>
         </Grid>
         <Grid item width="100%">
-          <Box style={{ backgroundColor: "#1B3A61", height: 6 }} />
+          <Box style={{ backgroundColor: headerColor, height: 6 }} />
         </Grid>
         <Grid item>
           <Grid

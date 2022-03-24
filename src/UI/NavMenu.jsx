@@ -9,14 +9,19 @@ import {
 } from "@mui/material";
 import { mainNav, allNavOptions } from "../data/TestData";
 import { NavLink } from "react-router-dom";
-import { headerColor, goldHighlight } from "../data/Globals";
+import {
+  headerColor,
+  goldHighlight,
+  lightBlack,
+  offWhite,
+} from "../data/Globals";
 import classes from "../UI/Links.module.css";
 
 const MyList = () => {
   return (
     <List>
       <Grid container direction="row">
-        <Grid item sx={{ backgroundColor: "#E1E5EA" }}>
+        <Grid item sx={{ backgroundColor: offWhite }}>
           <Grid
             container
             direction="column"
@@ -30,7 +35,7 @@ const MyList = () => {
                     <NavLink className={classes.navlink} to={nav.link}>
                       <Typography
                         sx={{ width: "100%" }}
-                        color="#333333"
+                        color={lightBlack}
                         fontWeight="bold"
                         align="center"
                         variant="h6"
@@ -79,7 +84,7 @@ const MyList = () => {
                             to={item.subLink}
                             className={classes.navlink}
                           >
-                            <Typography color="#333333">
+                            <Typography color={lightBlack}>
                               {item.subtitle}
                             </Typography>
                           </NavLink>

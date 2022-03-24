@@ -6,6 +6,8 @@ import {
   goldHighlight,
   buttonFill,
   buttonText,
+  white,
+  darkGrey,
 } from "../data/Globals";
 import { CustomButton } from "./MenuButton";
 import classes from "../UI/Links.module.css";
@@ -70,7 +72,7 @@ const RecentUpdates = (props) => {
                 <Typography variant="body2">{item.pubDate}</Typography>
               </Grid>
               <Grid item>
-                <Box sx={{ backgroundColor: "#666666", color: "#F3F6F9" }}>
+                <Box sx={{ backgroundColor: darkGrey, color: white }}>
                   <Typography padding={0.1} variant="body2">
                     {item.status}
                   </Typography>

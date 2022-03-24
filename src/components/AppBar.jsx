@@ -85,7 +85,7 @@ const CustomAppBar = () => {
                           </Typography>
                           <Typography
                             fontSize={10}
-                            sx={{ color: "#225089", fontStyle: "italic" }}
+                            sx={{ color: buttonClickFill, fontStyle: "italic" }}
                           >
                             {" "}
                             Transforming data into solutions for South Carolina

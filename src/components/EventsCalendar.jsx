@@ -8,22 +8,25 @@ import {
   goldHighlight,
   buttonFill,
   buttonText,
+  black,
+  yellow,
+  crimson,
 } from "../data/Globals";
 import { CustomButton } from "./MenuButton";
 
 const EventsCalendar = (props) => {
   const boxColorFunc = (status) => {
     if (status === "Updated") {
-      return "#D2B859";
+      return yellow;
     } else if (status === "Cancelled") {
-      return "#CC0000";
+      return crimson;
     }
   };
   const textColorFunc = (status) => {
     if (status === "Updated") {
-      return "#000000";
+      return black;
     } else if (status === "Cancelled") {
-      return "#F7F4ED";
+      return buttonText;
     }
   };
 
@@ -62,7 +65,7 @@ const EventsCalendar = (props) => {
                       <Box
                         style={{
                           backgroundColor: goldHighlight,
-                          color: "#F7F4ED",
+                          color: buttonText,
                         }}
                       >
                         <Grid container direction="column" padding={1}>

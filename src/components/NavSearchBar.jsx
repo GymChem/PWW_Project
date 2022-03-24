@@ -11,8 +11,6 @@ const NavSearchBar = () => {
           height: "auto",
           width: "auto",
           marginTop: 6,
-          align: "center",
-          justify: "flex-end",
           position: "fixed",
           zIndex: 1,
           top: 0,
@@ -30,7 +28,7 @@ const NavSearchBar = () => {
                   Search rfa.sc.gov
                 </Typography>
               }
-              sx={{ backgroundColor: "#F3F6F9", width: "100%" }}
+              sx={{ backgroundColor: white, width: "100%" }}
               variant="outlined"
             />
           </Grid>
