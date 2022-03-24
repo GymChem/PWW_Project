@@ -178,3 +178,10 @@ export const allNavOptions = [
     ],
   },
 ];
+
+export const appBarLinks = [
+  { name: "Home", link: "/home" },
+  { name: "About Us", link: "/placeholder" },
+  { name: "Events", link: "/placeholder" },
+  { name: "Boards & Committees", link: "/placeholder" },
+];

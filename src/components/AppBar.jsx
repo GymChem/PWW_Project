@@ -12,6 +12,9 @@ import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import NavMenu from "../UI/NavMenu";
 import MenuButton from "./MenuButton";
+import { NavLink } from "react-router-dom";
+import { appBarLinks } from "../data/TestData";
+import { buttonClickFill } from "../data/Globals";
 
 const CustomAppBar = () => {
   const [open, setOpen] = useState(false);
@@ -58,7 +61,7 @@ const CustomAppBar = () => {
                         >
                           <Typography
                             align="left"
-                            sx={{ color: "#225089" }}
+                            sx={{ color: buttonClickFill }}
                             fontWeight="bold"
                             fontSize={14}
                           >
@@ -68,7 +71,7 @@ const CustomAppBar = () => {
                           <Typography
                             align="left"
                             fontSize={14}
-                            sx={{ color: "#225089" }}
+                            sx={{ color: buttonClickFill }}
                             fontWeight="bold"
                           >
                             {" "}
@@ -90,9 +93,22 @@ const CustomAppBar = () => {
                       container
                       direction="row"
                       alignItems="center"
-                      justifyContent="flex-end"
+                      spacing={2}
                     >
-                      <Grid item>
+                      {appBarLinks.map((link, i) => {
+                        return (
+                          <Grid item key={i}>
+                            <NavLink to={link.link}>
+                              <Typography
+                                sx={{ fontSize: 14, color: buttonClickFill }}
+                              >
+                                {link.name}
+                              </Typography>
+                            </NavLink>
+                          </Grid>
+                        );
+                      })}
+                      {/* <Grid item>
                         <Button label="about us button">
                           <Typography sx={{ fontSize: 12, color: "#225089" }}>
                             About Us
@@ -112,7 +128,7 @@ const CustomAppBar = () => {
                             {"Boards & Committees"}
                           </Typography>
                         </Button>
-                      </Grid>
+                      </Grid> */}
                       <Grid item>
                         <Button
                           size="small"
