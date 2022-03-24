@@ -42,7 +42,6 @@ const BottomHalfPage = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      <Footer />
     </>
   );
 };

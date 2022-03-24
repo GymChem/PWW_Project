@@ -1,4 +1,4 @@
-import { Grid, Paper, Avatar, Typography } from "@mui/material";
+import { Grid, Paper, Avatar, Typography, Link } from "@mui/material";
 import { priorities } from "../data/TestData";
 import { headerColor } from "../data/Globals";
 
@@ -15,33 +15,42 @@ const PrioritiesBar = (props) => {
           {priorities.map((priority, ind) => {
             return (
               <Grid item key={ind} paddingTop={3} paddingBottom={3}>
-                <Paper>
-                  <Grid
-                    container
-                    padding={2.5}
-                    direction="column"
-                    alignItems="center"
-                    justifyContent="center"
-                    sx={{ width: 150 }}
+                <Link href="#">
+                  <Paper
+                    sx={{
+                      "&:hover": {
+                        borderColor: headerColor,
+                        border: 2,
+                      },
+                    }}
                   >
-                    <Avatar
-                      variant="square"
-                      sx={{ width: "60%", height: "60%" }}
-                      alt={priority.alt}
-                      src={priority.path}
-                    />
-                    <Typography
-                      fontWeight="bold"
-                      sx={{
-                        color: headerColor,
-                        fontSize: 12,
-                        paddingTop: 1.5,
-                      }}
+                    <Grid
+                      container
+                      padding={2.5}
+                      direction="column"
+                      alignItems="center"
+                      justifyContent="center"
+                      sx={{ width: 150 }}
                     >
-                      {priority.title}
-                    </Typography>
-                  </Grid>
-                </Paper>
+                      <Avatar
+                        variant="square"
+                        sx={{ width: "60%", height: "60%" }}
+                        alt={priority.alt}
+                        src={priority.path}
+                      />
+                      <Typography
+                        fontWeight="bold"
+                        sx={{
+                          color: headerColor,
+                          fontSize: 12,
+                          paddingTop: 1.5,
+                        }}
+                      >
+                        {priority.title}
+                      </Typography>
+                    </Grid>
+                  </Paper>
+                </Link>
               </Grid>
             );
           })}
