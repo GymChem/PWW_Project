@@ -1,0 +1,41 @@
+.header {
+  height: 5rem;
+  background-color: "#F3F6F9";
+}
+
+.header nav {
+  height: 100%;
+}
+
+.header ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header li {
+  margin: 0 1rem;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.header a:hover,
+.header a:hover {
+  color: #95bcf0;
+  text-decoration: underline;
+  border-bottom: 100px solid #1b3a61;
+}
+.header a:active,
+.header a.active {
+  color: #95bcf0;
+  border-bottom: 8px solid #1b3a61;
+}

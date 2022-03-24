@@ -6,6 +6,7 @@ import {
   Button,
   Typography,
   Avatar,
+  Link,
 } from "@mui/material";
 import * as React from "react";
 import { useState } from "react";
@@ -14,18 +15,21 @@ import NavMenu from "../UI/NavMenu";
 import MenuButton from "./MenuButton";
 import { NavLink } from "react-router-dom";
 import { appBarLinks } from "../data/TestData";
-import { buttonClickFill } from "../data/Globals";
+import {
+  buttonClickFill,
+  buttonFill,
+  buttonText,
+  buttonHoverFill,
+  white,
+} from "../data/Globals";
+import classes from "../UI/Tabs.module.css";
 
 const CustomAppBar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar
-          open={open}
-          position="static"
-          sx={{ backgroundColor: "#F3F6F9" }}
-        >
+        <AppBar open={open} position="static" sx={{ backgroundColor: white }}>
           <Toolbar disableGutters>
             <Grid container direction="column" justifyContent="flex-start">
               <Grid item>
@@ -93,21 +97,35 @@ const CustomAppBar = () => {
                       container
                       direction="row"
                       alignItems="center"
-                      spacing={2}
+                      justifyContent="center"
                     >
-                      {appBarLinks.map((link, i) => {
-                        return (
-                          <Grid item key={i}>
-                            <NavLink to={link.link}>
-                              <Typography
-                                sx={{ fontSize: 14, color: buttonClickFill }}
-                              >
-                                {link.name}
-                              </Typography>
-                            </NavLink>
-                          </Grid>
-                        );
-                      })}
+                      <header className={classes.header}>
+                        <nav>
+                          <ul>
+                            {appBarLinks.map((link, i) => {
+                              return (
+                                <Grid item key={i}>
+                                  <NavLink
+                                    to={link.link}
+                                    className={classes.active}
+                                  >
+                                    <li>
+                                      <Typography
+                                        sx={{
+                                          fontSize: 14,
+                                          color: buttonClickFill,
+                                        }}
+                                      >
+                                        {link.name}
+                                      </Typography>
+                                    </li>
+                                  </NavLink>
+                                </Grid>
+                              );
+                            })}
+                          </ul>
+                        </nav>
+                      </header>
                       {/* <Grid item>
                         <Button label="about us button">
                           <Typography sx={{ fontSize: 12, color: "#225089" }}>
