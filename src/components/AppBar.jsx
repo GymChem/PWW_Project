@@ -26,6 +26,7 @@ import classes from "../UI/Tabs.module.css";
 
 const CustomAppBar = () => {
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -128,11 +129,12 @@ const CustomAppBar = () => {
                       </header>
                       <Grid item>
                         <Button
+                          onClick={() => setSearchOpen(!searchOpen)}
                           size="small"
-                          variant="outlined"
+                          variant={!searchOpen ? "outlined" : "contained"}
                           sx={{
-                            color: "#0074C1",
-                            borderColor: "#0074C1",
+                            color: !searchOpen ? buttonFill : white,
+                            borderColor: buttonFill,
                           }}
                         >
                           <SearchIcon />
