@@ -48,8 +48,8 @@ const ScrollToTop = (props) => {
               size="medium"
               onClick={handleClick}
               sx={{
-                color: "#93A4BD",
                 zIndex: 2,
+                backgroundColor: buttonFill + "4D",
                 position: "fixed",
                 bottom: "8vh",
                 "&hover, &.Mui-focusVisible": {
