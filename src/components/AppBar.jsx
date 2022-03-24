@@ -126,27 +126,6 @@ const CustomAppBar = () => {
                           </ul>
                         </nav>
                       </header>
-                      {/* <Grid item>
-                        <Button label="about us button">
-                          <Typography sx={{ fontSize: 12, color: "#225089" }}>
-                            About Us
-                          </Typography>
-                        </Button>
-                      </Grid>
-                      <Grid item>
-                        <Button label="events button">
-                          <Typography sx={{ fontSize: 12, color: "#225089" }}>
-                            Events
-                          </Typography>
-                        </Button>
-                      </Grid>
-                      <Grid item>
-                        <Button label="boards and committees button">
-                          <Typography sx={{ fontSize: 12, color: "#225089" }}>
-                            {"Boards & Committees"}
-                          </Typography>
-                        </Button>
-                      </Grid> */}
                       <Grid item>
                         <Button
                           size="small"

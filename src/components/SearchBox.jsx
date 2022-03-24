@@ -21,8 +21,12 @@ const SearchBox = (props) => {
         height="100%"
         width="100%"
       >
-        <Grid item width="40%">
-          <Typography variant="h4" style={{ color: "#F7F4ED" }}>
+        <Grid item width="65%">
+          <Typography
+            fontWeight="bold"
+            variant="h4"
+            style={{ color: "#F7F4ED" }}
+          >
             Providing independent research, analysis, and resources to
             facilitate informed policy decisions and adminstration of services
           </Typography>

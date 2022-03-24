@@ -1,11 +1,12 @@
 import { Grid, Paper, Avatar, Typography, Link } from "@mui/material";
 import { priorities } from "../data/TestData";
-import { headerColor } from "../data/Globals";
+import { NavLink } from "react-router-dom";
+import { headerColor, buttonClickFill, grey } from "../data/Globals";
 
 const PrioritiesBar = (props) => {
   return (
     <>
-      <Paper style={{ backgroundColor: "#CCCCCC" }}>
+      <Paper style={{ backgroundColor: grey }}>
         <Grid
           container
           direction="row"
@@ -15,11 +16,11 @@ const PrioritiesBar = (props) => {
           {priorities.map((priority, ind) => {
             return (
               <Grid item key={ind} paddingTop={3} paddingBottom={3}>
-                <Link href="#">
+                <NavLink to="/placeholder">
                   <Paper
                     sx={{
                       "&:hover": {
-                        borderColor: headerColor,
+                        color: buttonClickFill,
                         border: 2,
                       },
                     }}
@@ -50,7 +51,7 @@ const PrioritiesBar = (props) => {
                       </Typography>
                     </Grid>
                   </Paper>
-                </Link>
+                </NavLink>
               </Grid>
             );
           })}

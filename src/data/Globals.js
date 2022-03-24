@@ -6,3 +6,4 @@ export const buttonText = "#F7F4ED";
 export const buttonHoverFill = "#3068AD";
 export const buttonClickFill = "#225089";
 export const white = "#F3F6F9";
+export const grey = "#CCCCCC";
