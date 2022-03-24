@@ -23,6 +23,7 @@ import {
   white,
 } from "../data/Globals";
 import classes from "../UI/Tabs.module.css";
+import NavSearchBar from "./NavSearchBar";
 
 const CustomAppBar = () => {
   const [open, setOpen] = useState(false);
@@ -128,17 +129,28 @@ const CustomAppBar = () => {
                         </nav>
                       </header>
                       <Grid item>
-                        <Button
-                          onClick={() => setSearchOpen(!searchOpen)}
-                          size="small"
-                          variant={!searchOpen ? "outlined" : "contained"}
-                          sx={{
-                            color: !searchOpen ? buttonFill : white,
-                            borderColor: buttonFill,
-                          }}
-                        >
-                          <SearchIcon />
-                        </Button>
+                        <Grid container direction="column">
+                          <Grid item>
+                            <Button
+                              onClick={() => setSearchOpen(!searchOpen)}
+                              size="small"
+                              variant={!searchOpen ? "outlined" : "contained"}
+                              sx={{
+                                backgroundColor: !searchOpen
+                                  ? white
+                                  : buttonFill,
+                                borderColor: buttonFill,
+                              }}
+                            >
+                              <SearchIcon />
+                            </Button>
+                          </Grid>
+                          {searchOpen && (
+                            <Grid item>
+                              <NavSearchBar />
+                            </Grid>
+                          )}
+                        </Grid>
                       </Grid>
                     </Grid>
                   </Grid>

@@ -31,14 +31,14 @@ const SearchBox = (props) => {
             facilitate informed policy decisions and adminstration of services
           </Typography>
         </Grid>
-        <Grid item width="40%">
+        <Grid item width="50%">
           <Grid
             container
             direction="row"
             alignItems="center"
             justifyContent="space-between"
           >
-            <Grid item width="75%">
+            <Grid item width="65%">
               <TextField
                 label={
                   <Typography style={{ fontStyle: "italic" }}>
