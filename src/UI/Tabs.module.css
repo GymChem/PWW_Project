@@ -1,5 +1,4 @@
 .header {
-  height: 5rem;
   background-color: "#F3F6F9";
 }
 
@@ -32,7 +31,7 @@
 .header a:hover {
   color: #95bcf0;
   text-decoration: underline;
-  border-bottom: 100px solid #1b3a61;
+  border-bottom: 8x solid #1b3a61;
 }
 .header a:active,
 .header a.active {

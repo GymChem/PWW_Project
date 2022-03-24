@@ -127,11 +127,11 @@ export const bottomLinks = [
 ];
 
 export const mainNav = [
-  "Home",
-  "News & Events",
-  "About Us",
-  "Contact Us",
-  "Boards & Committees",
+  { name: "Home", link: "/home" },
+  { name: "News & Events", link: "/placeholder" },
+  { name: "About Us", link: "/placeholder" },
+  { name: "Contact Us", link: "/placeholder" },
+  { name: "Boards & Committees", link: "/placeholder" },
 ];
 export const allNavOptions = [
   {

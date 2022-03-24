@@ -8,7 +8,9 @@ import {
   Grid,
 } from "@mui/material";
 import { mainNav, allNavOptions } from "../data/TestData";
+import { NavLink } from "react-router-dom";
 import { headerColor, goldHighlight } from "../data/Globals";
+import classes from "../UI/Links.module.css";
 
 const MyList = () => {
   return (
@@ -25,15 +27,17 @@ const MyList = () => {
               return (
                 <Grid item key={ind} sx={{ width: 250 }}>
                   <ListItem>
-                    <Typography
-                      sx={{ width: "100%" }}
-                      color="#333333"
-                      fontWeight="bold"
-                      align="center"
-                      variant="h6"
-                    >
-                      {nav}
-                    </Typography>
+                    <NavLink className={classes.navlink} to={nav.link}>
+                      <Typography
+                        sx={{ width: "100%" }}
+                        color="#333333"
+                        fontWeight="bold"
+                        align="center"
+                        variant="h6"
+                      >
+                        {nav.name}
+                      </Typography>
+                    </NavLink>
                   </ListItem>
                   {ind !== mainNav.length - 1 && <Divider />}
                 </Grid>
