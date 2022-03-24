@@ -16,7 +16,7 @@ const EventsCalendar = (props) => {
     if (status === "Updated") {
       return "#D2B859";
     } else if (status === "Cancelled") {
-      return "#E9261D";
+      return "#CC0000";
     }
   };
   const textColorFunc = (status) => {
@@ -80,12 +80,13 @@ const EventsCalendar = (props) => {
                     <Grid item>
                       <Grid container direction="column" spacing={0.5}>
                         {event.updateStatus && (
-                          <Grid item width="17%">
+                          <Grid item>
                             <Box
                               sx={{
                                 backgroundColor: boxColorFunc(
                                   event.updateStatus
                                 ),
+                                width: "fit-content",
                                 color: textColorFunc(event.updateStatus),
                                 align: "left",
                               }}
