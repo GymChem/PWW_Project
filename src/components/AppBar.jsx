@@ -24,10 +24,12 @@ import {
 } from "../data/Globals";
 import classes from "../UI/Tabs.module.css";
 import NavSearchBar from "./NavSearchBar";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const CustomAppBar = () => {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const desktopView = useMediaQuery((theme) => theme.breakpoints.up("900"));
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -101,33 +103,35 @@ const CustomAppBar = () => {
                       alignItems="center"
                       justifyContent="center"
                     >
-                      <header className={classes.header}>
-                        <nav>
-                          <ul>
-                            {appBarLinks.map((link, i) => {
-                              return (
-                                <Grid item key={i}>
-                                  <NavLink
-                                    to={link.link}
-                                    className={classes.active}
-                                  >
-                                    <li>
-                                      <Typography
-                                        sx={{
-                                          fontSize: 14,
-                                          color: buttonClickFill,
-                                        }}
-                                      >
-                                        {link.name}
-                                      </Typography>
-                                    </li>
-                                  </NavLink>
-                                </Grid>
-                              );
-                            })}
-                          </ul>
-                        </nav>
-                      </header>
+                      {desktopView && (
+                        <header className={classes.header}>
+                          <nav>
+                            <ul>
+                              {appBarLinks.map((link, i) => {
+                                return (
+                                  <Grid item key={i}>
+                                    <NavLink
+                                      to={link.link}
+                                      className={classes.active}
+                                    >
+                                      <li>
+                                        <Typography
+                                          sx={{
+                                            fontSize: 14,
+                                            color: buttonClickFill,
+                                          }}
+                                        >
+                                          {link.name}
+                                        </Typography>
+                                      </li>
+                                    </NavLink>
+                                  </Grid>
+                                );
+                              })}
+                            </ul>
+                          </nav>
+                        </header>
+                      )}
                       <Grid item>
                         <Grid container direction="column">
                           <Grid item>
