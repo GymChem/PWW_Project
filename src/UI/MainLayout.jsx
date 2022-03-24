@@ -6,12 +6,14 @@ import HomePage from "./HomePage";
 import Footer from "./Footer";
 import Routing from "./Routes";
 import { BrowserRouter } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MainLayout = () => {
+  const desktopView = useMediaQuery((theme) => theme.breakpoints.up("900"));
   return (
     <BrowserRouter>
-      <CustomAppBar />
-      <Routing />
+      <CustomAppBar desktopView={desktopView} />
+      <Routing desktopView={desktopView} />
       <Footer />
     </BrowserRouter>
   );

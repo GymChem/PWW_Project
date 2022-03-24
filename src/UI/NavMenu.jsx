@@ -18,11 +18,7 @@ import {
 } from "../data/Globals";
 import classes from "../UI/Links.module.css";
 
-const MyList = () => {
-  const desktopView = useMediaQuery((theme) => theme.breakpoints.up("900"));
-  const halfDesktopView = useMediaQuery((theme) =>
-    theme.breakpoints.down("900")
-  );
+const MyList = (props) => {
   return (
     <List>
       <Grid
@@ -69,7 +65,7 @@ const MyList = () => {
               return (
                 <Grid
                   item
-                  sx={{ width: desktopView ? "33%" : "50%" }}
+                  sx={{ width: props.desktopView ? "33%" : "50%" }}
                   key={sectionInd + 10}
                   padding={1}
                 >

@@ -15,21 +15,13 @@ import NavMenu from "../UI/NavMenu";
 import MenuButton from "./MenuButton";
 import { NavLink } from "react-router-dom";
 import { appBarLinks } from "../data/TestData";
-import {
-  buttonClickFill,
-  buttonFill,
-  buttonText,
-  buttonHoverFill,
-  white,
-} from "../data/Globals";
+import { buttonClickFill, buttonFill, white } from "../data/Globals";
 import classes from "../UI/Tabs.module.css";
 import NavSearchBar from "./NavSearchBar";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
-const CustomAppBar = () => {
+const CustomAppBar = (props) => {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const desktopView = useMediaQuery((theme) => theme.breakpoints.up("900"));
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -103,7 +95,7 @@ const CustomAppBar = () => {
                       alignItems="center"
                       justifyContent="center"
                     >
-                      {desktopView && (
+                      {props.desktopView && (
                         <header className={classes.header}>
                           <nav>
                             <ul>
@@ -162,7 +154,7 @@ const CustomAppBar = () => {
               </Grid>
               {open && (
                 <Grid item>
-                  <NavMenu />
+                  <NavMenu desktopView={props.desktopView} />
                 </Grid>
               )}
             </Grid>

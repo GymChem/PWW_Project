@@ -2,7 +2,6 @@ import { Button, Box, Paper, Grid, Typography, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { buttonFill, buttonText, white } from "../data/Globals";
 import { CustomButton } from "./MenuButton";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 const styles = {
   paperContainer: {
@@ -11,11 +10,9 @@ const styles = {
   },
 };
 
-const SearchBox = () => {
-  const desktopView = useMediaQuery((theme) => theme.breakpoints.up("900"));
+const SearchBox = (props) => {
   const widthFunc = () => {
-    console.log(desktopView);
-    if (desktopView) {
+    if (props.desktopView) {
       return "55%";
     } else return "75%";
   };
@@ -42,8 +39,8 @@ const SearchBox = () => {
         <Grid item width={() => widthFunc()}>
           <Grid
             container
-            direction={desktopView ? "row" : "column"}
-            spacing={!desktopView ? 1 : 0}
+            direction={props.desktopView ? "row" : "column"}
+            spacing={!props.desktopView ? 1 : 0}
             alignItems="center"
             justifyContent="space-between"
           >
