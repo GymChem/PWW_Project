@@ -50,10 +50,20 @@ const MyList = () => {
             {allNavOptions.map((navSection, sectionInd) => {
               return (
                 <Grid item width="33%" key={sectionInd + 10} padding={1}>
-                  <Grid container direction="column" alignItems="flex-start">
-                    <Typography color={headerColor} fontWeight="bold">
-                      {navSection.title}
-                    </Typography>
+                  <Grid
+                    container
+                    direction="column"
+                    alignItems="flex-start"
+                    color={headerColor}
+                  >
+                    <NavLink
+                      to={navSection.mainLink}
+                      className={classes.navlink}
+                    >
+                      <Typography color={headerColor} fontWeight="bold">
+                        {navSection.title}
+                      </Typography>
+                    </NavLink>
                     <Box
                       style={{
                         backgroundColor: goldHighlight,
@@ -65,7 +75,14 @@ const MyList = () => {
                     {navSection.subsection.map((item, itemInd) => {
                       return (
                         <Grid key={itemInd + 100}>
-                          <Typography color="#333333">{item}</Typography>
+                          <NavLink
+                            to={item.subLink}
+                            className={classes.navlink}
+                          >
+                            <Typography color="#333333">
+                              {item.subtitle}
+                            </Typography>
+                          </NavLink>
                         </Grid>
                       );
                     })}
