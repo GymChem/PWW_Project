@@ -1,6 +1,8 @@
 import { Box, Grid, Typography, Link } from "@mui/material";
 import { links } from "../data/TestData";
 import { linkColor, headerColor } from "../data/Globals";
+import { NavLink } from "react-router-dom";
+import classes from "../UI/Links.module.css";
 
 const PopularLinks = () => {
   return (
@@ -40,12 +42,13 @@ const PopularLinks = () => {
                   paddingTop={2}
                   paddingBottom={1}
                   paddingRight={2}
+                  color={linkColor}
                 >
-                  <Link href="#">
+                  <NavLink to={link.link} className={classes.navlink}>
                     <Typography color={linkColor} align="left">
-                      {link}
+                      {link.linkName}
                     </Typography>
-                  </Link>
+                  </NavLink>
                 </Grid>
               );
             })}

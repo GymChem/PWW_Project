@@ -26,7 +26,7 @@ const Footer = () => {
         >
           <Grid item width="33%">
             <Grid container direction="column">
-              <Grid item>
+              <Grid item paddingBottom={2}>
                 <Typography align="left" variant="h6" fontWeight="bold">
                   South Carolina
                 </Typography>

@@ -8,6 +8,8 @@ import {
   buttonText,
 } from "../data/Globals";
 import { CustomButton } from "./MenuButton";
+import classes from "../UI/Links.module.css";
+import { NavLink } from "react-router-dom";
 
 const RecentUpdates = (props) => {
   return (
@@ -32,12 +34,18 @@ const RecentUpdates = (props) => {
       </Grid>
       {updateList.map((item, ind) => {
         return (
-          <Grid item key={ind} padding={1}>
-            <Link href="#">
+          <Grid
+            item
+            key={ind}
+            paddingBottom={1}
+            paddingTop={1}
+            paddingRight={1}
+          >
+            <NavLink to={item.link} className={classes.navlink}>
               <Typography paddingRight={12} color={linkColor} align="left">
-                {item.link}
+                {item.linkName}
               </Typography>
-            </Link>
+            </NavLink>
             {item.blurb && (
               <Typography
                 align="left"

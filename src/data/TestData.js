@@ -1,13 +1,34 @@
 export const links = [
-  "Overview and History of the South Carolina State Budget",
-  "Overview and History of the South Carolina State Budget",
-  "Overview and History of the South Carolina State Budget",
-  "Employer Contribution Trends",
-  "Employer Contribution Trends - June 4, 2019",
-  "Employer Contribution Trends - June 4, 2019",
-  "Appropriation Bills and Acts",
-  "Executive Budget Office State Agency Budget Plans(Requests)",
-  "Executive Budget Office State Agency Budget Plans(Requests)",
+  {
+    linkName: "Overview and History of the South Carolina State Budget",
+    link: "/placeholder",
+  },
+  {
+    linkName: "Overview and History of the South Carolina State Budget",
+    link: "/placeholder",
+  },
+  {
+    linkName: "Overview and History of the South Carolina State Budget",
+    link: "/placeholder",
+  },
+  { linkName: "Employer Contribution Trends", link: "/placeholder" },
+  {
+    linkName: "Employer Contribution Trends - June 4, 2019",
+    link: "/placeholder",
+  },
+  {
+    linkName: "Employer Contribution Trends - June 4, 2019",
+    link: "/placeholder",
+  },
+  { linkName: "Appropriation Bills and Acts", link: "/placeholder" },
+  {
+    linkName: "Executive Budget Office State Agency Budget Plans(Requests)",
+    link: "/placeholder",
+  },
+  {
+    linkName: "Executive Budget Office State Agency Budget Plans(Requests)",
+    link: "/placeholder",
+  },
 ];
 
 export const events = [
@@ -49,30 +70,40 @@ export const events = [
 
 export const updateList = [
   {
-    link: "Local Government Finance",
+    linkName: "Local Government Finance",
     blurb:
       "Vestibulum rutrum quam vitae frigilla tincidunt, Suspendisse nec tortor urna, Ut laoreet sodales",
     pubDate: "Jan 2, 2020",
     status: "Updated",
+    link: "/placeholder",
   },
   {
-    link: "Transportation Network Carrier Maps",
+    linkName: "Transportation Network Carrier Maps",
     pubDate: "Jan 2, 2020",
     status: "New",
+    link: "/placeholder",
   },
   {
-    link: "BEA Long-Range General Fund Revenue Plan for FY 2019-20 to FY 2022-23",
+    linkName:
+      "BEA Long-Range General Fund Revenue Plan for FY 2019-20 to FY 2022-23",
     pubDate: "Dec 16, 2019",
     blurb:
       "Vestibulum rutrum quam vitae frigilla tincidunt, Suspendisse nec tortor urna, Ut laoreet sodales",
     pubDate: "Jan 2, 2020",
     status: "Updated",
+    link: "/placeholder",
   },
-  { link: "Budget Development", pubDate: "Dec 16, 2019", status: "New" },
   {
-    link: "November 2019 General Fund Revenue Digest",
+    linkName: "Budget Development",
+    pubDate: "Dec 16, 2019",
+    status: "New",
+    link: "/placeholder",
+  },
+  {
+    linkName: "November 2019 General Fund Revenue Digest",
     pubDate: "Dec 13, 2019",
     status: "New",
+    link: "/placeholder",
   },
 ];
 
