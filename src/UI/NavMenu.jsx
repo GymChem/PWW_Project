@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { mainNav, allNavOptions } from "../data/TestData";
 import { NavLink } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   headerColor,
   goldHighlight,
@@ -18,10 +19,23 @@ import {
 import classes from "../UI/Links.module.css";
 
 const MyList = () => {
+  const desktopView = useMediaQuery((theme) => theme.breakpoints.up("900"));
+  const halfDesktopView = useMediaQuery((theme) =>
+    theme.breakpoints.down("900")
+  );
   return (
     <List>
-      <Grid container direction="row">
-        <Grid item sx={{ backgroundColor: offWhite }}>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        wrap="nowrap"
+      >
+        <Grid
+          item
+          sx={{ backgroundColor: offWhite }}
+          sx={{ width: "fit-content" }}
+        >
           <Grid
             container
             direction="column"
@@ -30,11 +44,10 @@ const MyList = () => {
           >
             {mainNav.map((nav, ind) => {
               return (
-                <Grid item key={ind} sx={{ width: 250 }} color={headerColor}>
+                <Grid item key={ind} color={headerColor}>
                   <ListItem>
                     <NavLink className={classes.navlink} to={nav.link}>
                       <Typography
-                        sx={{ width: "100%" }}
                         color={lightBlack}
                         fontWeight="bold"
                         align="center"
@@ -50,22 +63,32 @@ const MyList = () => {
             })}
           </Grid>
         </Grid>
-        <Grid item paddingLeft={4} paddingTop={1}>
-          <Grid container direction="row">
+        <Grid item paddingTop={1} border={1}>
+          <Grid container direction="row" justifyContent="flex-start">
             {allNavOptions.map((navSection, sectionInd) => {
               return (
-                <Grid item width="33%" key={sectionInd + 10} padding={1}>
+                <Grid
+                  item
+                  sx={{ width: desktopView ? "33%" : "50%" }}
+                  key={sectionInd + 10}
+                  padding={1}
+                >
                   <Grid
                     container
                     direction="column"
                     alignItems="flex-start"
+                    sx={{ minWidth: "fit-content" }}
                     color={headerColor}
                   >
                     <NavLink
                       to={navSection.mainLink}
                       className={classes.navlink}
                     >
-                      <Typography color={headerColor} fontWeight="bold">
+                      <Typography
+                        align="left"
+                        color={headerColor}
+                        fontWeight="bold"
+                      >
                         {navSection.title}
                       </Typography>
                     </NavLink>
@@ -84,7 +107,7 @@ const MyList = () => {
                             to={item.subLink}
                             className={classes.navlink}
                           >
-                            <Typography color={lightBlack}>
+                            <Typography align="left" color={lightBlack}>
                               {item.subtitle}
                             </Typography>
                           </NavLink>
