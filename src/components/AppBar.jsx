@@ -124,30 +124,32 @@ const CustomAppBar = (props) => {
                           </nav>
                         </header>
                       )}
-                      <Grid item>
-                        <Grid container direction="column">
-                          <Grid item>
-                            <Button
-                              onClick={() => setSearchOpen(!searchOpen)}
-                              size="small"
-                              variant={!searchOpen ? "outlined" : "contained"}
-                              sx={{
-                                backgroundColor: !searchOpen
-                                  ? white
-                                  : buttonFill,
-                                borderColor: buttonFill,
-                              }}
-                            >
-                              <SearchIcon />
-                            </Button>
-                          </Grid>
-                          {searchOpen && (
+                      {!props.mobileView && (
+                        <Grid item>
+                          <Grid container direction="column">
                             <Grid item>
-                              <NavSearchBar />
+                              <Button
+                                onClick={() => setSearchOpen(!searchOpen)}
+                                size="small"
+                                variant={!searchOpen ? "outlined" : "contained"}
+                                sx={{
+                                  backgroundColor: !searchOpen
+                                    ? white
+                                    : buttonFill,
+                                  borderColor: buttonFill,
+                                }}
+                              >
+                                <SearchIcon />
+                              </Button>
                             </Grid>
-                          )}
+                            {searchOpen && (
+                              <Grid item>
+                                <NavSearchBar />
+                              </Grid>
+                            )}
+                          </Grid>
                         </Grid>
-                      </Grid>
+                      )}
                     </Grid>
                   </Grid>
                 </Grid>

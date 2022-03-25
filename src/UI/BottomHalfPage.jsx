@@ -34,7 +34,11 @@ const BottomHalfPage = (props) => {
             >
               <RecentUpdates />
             </Grid>
-            <Grid item width={!props.mobileView ? "50%" : "90%"}>
+            <Grid
+              item
+              width={!props.mobileView ? "50%" : "90%"}
+              paddingBottom={4}
+            >
               <EventsCalendar />
             </Grid>
             <div ref={scrollEndRef} />
