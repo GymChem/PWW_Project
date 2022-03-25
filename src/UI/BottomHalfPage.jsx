@@ -1,4 +1,4 @@
-import { Grid, Typograpy, Box, Link } from "@mui/material";
+import { Grid } from "@mui/material";
 import RecentUpdates from "../components/RecentUpdates";
 import EventsCalendar from "../components/EventsCalendar";
 import ScrollToTop from "./ScrollToTop";
@@ -22,15 +22,19 @@ const BottomHalfPage = (props) => {
         <Grid item width="80%">
           <Grid
             container
-            direction="row"
+            direction={!props.mobileView ? "row" : "column"}
             alignItems="flex-start"
             justifyContent="center"
             paddingTop={4}
           >
-            <Grid item width="50%">
+            <Grid
+              item
+              width={!props.mobileView ? "50%" : "90%"}
+              paddingBottom={!props.mobileView ? 0 : 4}
+            >
               <RecentUpdates />
             </Grid>
-            <Grid item width="50%">
+            <Grid item width={!props.mobileView ? "50%" : "90%"}>
               <EventsCalendar />
             </Grid>
             <div ref={scrollEndRef} />
