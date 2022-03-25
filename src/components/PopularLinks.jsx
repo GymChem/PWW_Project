@@ -4,7 +4,7 @@ import { linkColor, headerColor } from "../data/Globals";
 import { NavLink } from "react-router-dom";
 import classes from "../UI/Links.module.css";
 
-const PopularLinks = () => {
+const PopularLinks = (props) => {
   return (
     <>
       <Grid
@@ -29,7 +29,7 @@ const PopularLinks = () => {
         <Grid item>
           <Grid
             container
-            direction="row"
+            direction={!props.mobileView ? "row" : "column"}
             alignItems="center"
             justifyContent="flex-start"
           >
@@ -38,7 +38,7 @@ const PopularLinks = () => {
                 <Grid
                   item
                   key={ind}
-                  width="33%"
+                  width={!props.mobileView ? "33%" : "100%"}
                   paddingTop={2}
                   paddingBottom={1}
                   paddingRight={2}

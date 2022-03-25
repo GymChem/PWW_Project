@@ -17,7 +17,7 @@ const BottomHalfPage = (props) => {
         justifyContent="center"
       >
         <Grid item width="80%" paddingBottom={2}>
-          <PopularLinks />
+          <PopularLinks mobileView={props.mobileView} />
         </Grid>
         <Grid item width="80%">
           <Grid
