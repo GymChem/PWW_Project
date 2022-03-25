@@ -41,6 +41,7 @@ const CustomAppBar = (props) => {
                       direction="row"
                       alignItems="flex-start"
                       justifyContent="flex-start"
+                      wrap="nowrap"
                     >
                       <Grid item>
                         <MenuButton open={open} setOpen={setOpen} />
@@ -64,14 +65,14 @@ const CustomAppBar = (props) => {
                             sx={{ color: buttonClickFill }}
                             fontWeight="bold"
                             paddingTop={!props.mobileView ? 0 : 1}
-                            fontSize={!props.mobileView ? 14 : 12}
+                            fontSize={!props.mobileView ? 14 : 11}
                           >
                             {" "}
                             SOUTH CAROLINA
                           </Typography>
                           <Typography
                             align="left"
-                            fontSize={!props.mobileView ? 14 : 12}
+                            fontSize={!props.mobileView ? 14 : 11}
                             sx={{ color: buttonClickFill }}
                             fontWeight="bold"
                           >
