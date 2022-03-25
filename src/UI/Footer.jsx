@@ -5,7 +5,7 @@ import { headerColor, white } from "../data/Globals";
 import { NavLink } from "react-router-dom";
 import classes from "../UI/Links.module.css";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <AppBar
       position="static"
@@ -19,13 +19,13 @@ const Footer = () => {
       <Container>
         <Grid
           container
-          direction="row"
+          direction={!props.mobileView ? "row" : "column"}
           spacing={2}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent={!props.mobileView ? "space-between" : "flex-start"}
         >
-          <Grid item width="33%">
-            <Grid container direction="column">
+          <Grid item width={!props.mobileView ? "33" : "100%"}>
+            <Grid container direction={!props.mobileView ? "column" : "row"}>
               <Grid item paddingBottom={2}>
                 <Typography align="left" variant="h6" fontWeight="bold">
                   South Carolina
@@ -43,7 +43,7 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item width="33%">
+          <Grid item width={!props.mobileView ? "33" : "100%"}>
             <Grid container direction="column">
               {bottomLinks.map((link, ind) => {
                 return (
@@ -58,7 +58,7 @@ const Footer = () => {
               })}
             </Grid>
           </Grid>
-          <Grid item width="33%">
+          <Grid item width={!props.mobileView ? "33" : "100%"}>
             <Grid container direction="column" spacing={1}>
               {locations.map((location, ind) => {
                 return (

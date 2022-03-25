@@ -104,9 +104,15 @@ const EventsCalendar = (props) => {
                           </Typography>
                         </Grid>
                         <Grid item>
-                          <Grid container direction="row">
-                            <LocationOnIcon sx={{ color: goldHighlight }} />
-                            <Typography>{event.location}</Typography>
+                          <Grid container direction="row" wrap="nowrap">
+                            <Grid item>
+                              <LocationOnIcon sx={{ color: goldHighlight }} />
+                            </Grid>
+                            <Grid item>
+                              <Typography align="left">
+                                {event.location}
+                              </Typography>
+                            </Grid>
                           </Grid>
                         </Grid>
                         <Grid item>

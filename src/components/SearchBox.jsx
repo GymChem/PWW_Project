@@ -40,7 +40,7 @@ const SearchBox = (props) => {
           <Grid
             container
             direction={props.desktopView ? "row" : "column"}
-            spacing={!props.desktopView ? 1 : 0}
+            spacing={!props.halfDesktopView ? 1 : 0}
             alignItems="center"
             justifyContent="space-between"
           >

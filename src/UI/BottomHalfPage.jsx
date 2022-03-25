@@ -4,14 +4,10 @@ import EventsCalendar from "../components/EventsCalendar";
 import ScrollToTop from "./ScrollToTop";
 import PopularLinks from "../components/PopularLinks";
 import { useRef } from "react";
-import Footer from "./Footer";
 import { buttonFill } from "../data/Globals";
 
 const BottomHalfPage = (props) => {
   const scrollEndRef = useRef(null);
-  const scrollToBottom = () => {
-    scrollEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <>
       <Grid

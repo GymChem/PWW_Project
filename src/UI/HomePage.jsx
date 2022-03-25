@@ -7,8 +7,12 @@ const HomePage = (props) => {
   return (
     <>
       <SearchBox desktopView={props.desktopView} />
-      <PrioritiesBar />
-      <BottomHalfPage />
+      <PrioritiesBar mobileView={props.mobileView} />
+      <BottomHalfPage
+        desktopView={props.desktopView}
+        halfDesktopView={props.halfDesktopView}
+        mobileView={props.mobileView}
+      />
     </>
   );
 };
