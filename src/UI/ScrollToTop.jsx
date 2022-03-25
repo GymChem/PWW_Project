@@ -37,7 +37,7 @@ const ScrollToTop = (props) => {
           spacing={1.5}
           paddingRight={12}
         >
-          <Grid item>
+          <Grid item paddingBottom={4}>
             <Button onClick={handleClick} aria-label="Scroll to top button">
               <Typography>Back to Top</Typography>
             </Button>

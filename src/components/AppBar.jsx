@@ -157,7 +157,10 @@ const CustomAppBar = (props) => {
               </Grid>
               {open && (
                 <Grid item>
-                  <NavMenu desktopView={props.desktopView} />
+                  <NavMenu
+                    desktopView={props.desktopView}
+                    mobileView={props.mobileView}
+                  />
                 </Grid>
               )}
             </Grid>

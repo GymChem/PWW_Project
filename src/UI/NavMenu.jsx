@@ -6,10 +6,13 @@ import {
   Typography,
   Divider,
   Grid,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { mainNav, allNavOptions } from "../data/TestData";
 import { NavLink } from "react-router-dom";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   headerColor,
   goldHighlight,
@@ -23,14 +26,14 @@ const MyList = (props) => {
     <List>
       <Grid
         container
-        direction="row"
+        direction={!props.mobileView ? "row" : "column"}
         justifyContent="space-between"
         wrap="nowrap"
       >
         <Grid
           item
           sx={{ backgroundColor: offWhite }}
-          sx={{ width: "fit-content" }}
+          sx={{ width: !props.mobileView ? "fit-content" : "100%" }}
         >
           <Grid
             container
@@ -61,59 +64,105 @@ const MyList = (props) => {
         </Grid>
         <Grid item paddingTop={1} border={1}>
           <Grid container direction="row" justifyContent="flex-start">
-            {allNavOptions.map((navSection, sectionInd) => {
-              return (
-                <Grid
-                  item
-                  sx={{ width: props.desktopView ? "33%" : "50%" }}
-                  key={sectionInd + 10}
-                  padding={1}
-                >
+            {!props.mobileView &&
+              allNavOptions.map((navSection, sectionInd) => {
+                return (
                   <Grid
-                    container
-                    direction="column"
-                    alignItems="flex-start"
-                    sx={{ minWidth: "fit-content" }}
-                    color={headerColor}
+                    item
+                    sx={{ width: props.desktopView ? "33%" : "50%" }}
+                    key={sectionInd + 10}
+                    padding={1}
                   >
-                    <NavLink
-                      to={navSection.mainLink}
-                      className={classes.navlink}
+                    <Grid
+                      container
+                      direction="column"
+                      alignItems="flex-start"
+                      sx={{ minWidth: "fit-content" }}
+                      color={headerColor}
                     >
-                      <Typography
-                        align="left"
-                        color={headerColor}
-                        fontWeight="bold"
+                      <NavLink
+                        to={navSection.mainLink}
+                        className={classes.navlink}
                       >
-                        {navSection.title}
-                      </Typography>
-                    </NavLink>
-                    <Box
-                      style={{
-                        backgroundColor: goldHighlight,
-                        height: 4,
-                        width: "15%",
-                        marginBottom: 8,
-                      }}
-                    />
-                    {navSection.subsection.map((item, itemInd) => {
-                      return (
-                        <Grid key={itemInd + 100}>
-                          <NavLink
-                            to={item.subLink}
-                            className={classes.navlink}
-                          >
-                            <Typography align="left" color={lightBlack}>
-                              {item.subtitle}
-                            </Typography>
-                          </NavLink>
-                        </Grid>
-                      );
-                    })}
+                        <Typography
+                          align="left"
+                          color={headerColor}
+                          fontWeight="bold"
+                        >
+                          {navSection.title}
+                        </Typography>
+                      </NavLink>
+                      <Box
+                        style={{
+                          backgroundColor: goldHighlight,
+                          height: 4,
+                          width: "15%",
+                          marginBottom: 8,
+                        }}
+                      />
+                      {navSection.subsection.map((item, itemInd) => {
+                        return (
+                          <Grid key={itemInd + 100}>
+                            <NavLink
+                              to={item.subLink}
+                              className={classes.navlink}
+                            >
+                              <Typography align="left" color={lightBlack}>
+                                {item.subtitle}
+                              </Typography>
+                            </NavLink>
+                          </Grid>
+                        );
+                      })}
+                    </Grid>
                   </Grid>
-                </Grid>
-              );
-            })}
+                );
+              })}
+            {props.mobileView &&
+              allNavOptions.map((navSection, i) => {
+                return (
+                  <Grid item key={i} width="100%">
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1bh-content"
+                        id="panel1bh-header"
+                      >
+                        <NavLink
+                          to={navSection.mainLink}
+                          className={classes.navlink}
+                        >
+                          <Typography
+                            align="left"
+                            color={headerColor}
+                            fontWeight="bold"
+                          >
+                            {navSection.title}
+                          </Typography>
+                        </NavLink>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Grid container direction="column">
+                          {navSection.subsection.map((item, itemInd) => {
+                            return (
+                              <Grid key={itemInd + 100}>
+                                <NavLink
+                                  to={item.subLink}
+                                  className={classes.navlink}
+                                >
+                                  <Typography align="left" color={lightBlack}>
+                                    {item.subtitle}
+                                  </Typography>
+                                </NavLink>
+                              </Grid>
+                            );
+                          })}
+                        </Grid>
+                      </AccordionDetails>
+                    </Accordion>
+                  </Grid>
+                );
+              })}
           </Grid>
         </Grid>
       </Grid>
@@ -140,7 +189,7 @@ const NavMenu = (props) => {
         anchor="bottom"
         open={props.open}
       >
-        <MyList />
+        <MyList mobileView={props.mobileView} />
       </Box>
     </>
   );
