@@ -63,14 +63,15 @@ const CustomAppBar = (props) => {
                             align="left"
                             sx={{ color: buttonClickFill }}
                             fontWeight="bold"
-                            fontSize={14}
+                            paddingTop={!props.mobileView ? 0 : 1}
+                            fontSize={!props.mobileView ? 14 : 12}
                           >
                             {" "}
                             SOUTH CAROLINA
                           </Typography>
                           <Typography
                             align="left"
-                            fontSize={14}
+                            fontSize={!props.mobileView ? 14 : 12}
                             sx={{ color: buttonClickFill }}
                             fontWeight="bold"
                           >
