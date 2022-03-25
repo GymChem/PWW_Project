@@ -131,6 +131,7 @@ const CustomAppBar = (props) => {
                           <Grid container direction="column">
                             <Grid item>
                               <Button
+                                aria-label="button to expand search bar"
                                 onClick={() => setSearchOpen(!searchOpen)}
                                 size="small"
                                 variant={!searchOpen ? "outlined" : "contained"}
