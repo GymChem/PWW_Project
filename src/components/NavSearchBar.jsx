@@ -1,12 +1,12 @@
 import { Box, TextField, Button, Grid, Typography } from "@mui/material";
-import { buttonFill, white, buttonHoverFill } from "../data/Globals";
+import { blue20, white10, blue30 } from "../data/Globals";
 
 const NavSearchBar = () => {
   return (
     <>
       <Box
         padding={1}
-        backgroundColor={buttonFill}
+        backgroundColor={blue20}
         sx={{
           height: "auto",
           width: "auto",
@@ -28,7 +28,7 @@ const NavSearchBar = () => {
                   Search rfa.sc.gov
                 </Typography>
               }
-              sx={{ backgroundColor: white, width: "100%" }}
+              sx={{ backgroundColor: white10, width: "100%" }}
               variant="outlined"
             />
           </Grid>
@@ -37,11 +37,11 @@ const NavSearchBar = () => {
               size="small"
               variant="outlined"
               sx={{
-                color: white,
-                borderColor: white,
+                color: white10,
+                borderColor: white10,
                 "&:hover": {
-                  backgroundColor: buttonHoverFill,
-                  borderColor: white,
+                  backgroundColor: blue30,
+                  borderColor: white10,
                 },
               }}
             >

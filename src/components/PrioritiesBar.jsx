@@ -1,12 +1,12 @@
 import { Grid, Paper, Avatar, Typography, Link } from "@mui/material";
 import { priorities } from "../data/TestData";
 import { NavLink } from "react-router-dom";
-import { headerColor, buttonClickFill, grey } from "../data/Globals";
+import { blue50, blue40, grey10 } from "../data/Globals";
 
-const PrioritiesBar = (props) => {
+const PrioritiesBar = () => {
   return (
     <>
-      <Paper style={{ backgroundColor: grey }}>
+      <Paper style={{ backgroundColor: grey10 }}>
         <Grid
           container
           direction="row"
@@ -20,7 +20,7 @@ const PrioritiesBar = (props) => {
                   <Paper
                     sx={{
                       "&:hover": {
-                        color: buttonClickFill,
+                        color: blue40,
                         border: 2,
                       },
                     }}
@@ -42,7 +42,7 @@ const PrioritiesBar = (props) => {
                       <Typography
                         fontWeight="bold"
                         sx={{
-                          color: headerColor,
+                          color: blue50,
                           fontSize: 12,
                           paddingTop: 1.5,
                         }}

@@ -4,7 +4,7 @@ import EventsCalendar from "../components/EventsCalendar";
 import ScrollToTop from "./ScrollToTop";
 import PopularLinks from "../components/PopularLinks";
 import { useRef } from "react";
-import { buttonFill } from "../data/Globals";
+import { blue20 } from "../data/Globals";
 
 const BottomHalfPage = (props) => {
   const scrollEndRef = useRef(null);
@@ -42,7 +42,7 @@ const BottomHalfPage = (props) => {
               <EventsCalendar />
             </Grid>
             <div ref={scrollEndRef} />
-            <ScrollToTop showBelow={250} buttonFill={buttonFill} />
+            <ScrollToTop showBelow={250} buttonFill={blue20} />
           </Grid>
         </Grid>
       </Grid>

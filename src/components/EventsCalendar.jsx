@@ -4,29 +4,28 @@ import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import { events } from "../data/TestData";
 import {
-  headerColor,
-  goldHighlight,
-  buttonFill,
-  buttonText,
+  blue50,
+  gold30,
+  white20,
   black,
-  yellow,
-  crimson,
+  yellow30,
+  red70,
 } from "../data/Globals";
 import { CustomButton } from "./MenuButton";
 
-const EventsCalendar = (props) => {
+const EventsCalendar = () => {
   const boxColorFunc = (status) => {
     if (status === "Updated") {
-      return yellow;
+      return yellow30;
     } else if (status === "Cancelled") {
-      return crimson;
+      return red70;
     }
   };
   const textColorFunc = (status) => {
     if (status === "Updated") {
       return black;
     } else if (status === "Cancelled") {
-      return buttonText;
+      return white20;
     }
   };
 
@@ -39,18 +38,14 @@ const EventsCalendar = (props) => {
         justifyContent="center"
       >
         <Grid item>
-          <Typography
-            variant="h5"
-            fontWeight="bold"
-            sx={{ color: headerColor }}
-          >
+          <Typography variant="h5" fontWeight="bold" sx={{ color: blue50 }}>
             Calendar of Events
           </Typography>
         </Grid>
         <Grid item width="6%" paddingBottom={4}>
           <Box
             style={{
-              backgroundColor: goldHighlight,
+              backgroundColor: gold30,
               height: 4,
             }}
           />
@@ -64,8 +59,8 @@ const EventsCalendar = (props) => {
                     <Grid item>
                       <Box
                         style={{
-                          backgroundColor: goldHighlight,
-                          color: buttonText,
+                          backgroundColor: gold30,
+                          color: white20,
                         }}
                       >
                         <Grid container direction="column" padding={1}>
@@ -106,7 +101,7 @@ const EventsCalendar = (props) => {
                         <Grid item>
                           <Grid container direction="row" wrap="nowrap">
                             <Grid item>
-                              <LocationOnIcon sx={{ color: goldHighlight }} />
+                              <LocationOnIcon sx={{ color: gold30 }} />
                             </Grid>
                             <Grid item>
                               <Typography align="left">
@@ -117,13 +112,13 @@ const EventsCalendar = (props) => {
                         </Grid>
                         <Grid item>
                           <Grid container direction="row">
-                            <QueryBuilderIcon sx={{ color: goldHighlight }} />
+                            <QueryBuilderIcon sx={{ color: gold30 }} />
                             <Typography>{event.time}</Typography>
                           </Grid>
                         </Grid>
                         <Grid item>
                           <Grid container direction="row">
-                            <PhoneIphoneIcon sx={{ color: goldHighlight }} />
+                            <PhoneIphoneIcon sx={{ color: gold30 }} />
                             <Typography>{event.phoneNum}</Typography>
                           </Grid>
                         </Grid>

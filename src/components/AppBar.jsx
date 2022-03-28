@@ -14,7 +14,7 @@ import NavMenu from "../UI/NavMenu";
 import MenuButton from "./MenuButton";
 import { NavLink } from "react-router-dom";
 import { appBarLinks } from "../data/TestData";
-import { buttonClickFill, buttonFill, white } from "../data/Globals";
+import { blue40, blue20, white10 } from "../data/Globals";
 import classes from "../UI/Tabs.module.css";
 import NavSearchBar from "./NavSearchBar";
 
@@ -24,7 +24,7 @@ const CustomAppBar = (props) => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar open={open} position="static" sx={{ backgroundColor: white }}>
+        <AppBar open={open} position="static" sx={{ backgroundColor: white10 }}>
           <Toolbar disableGutters>
             <Grid container direction="column" justifyContent="flex-start">
               <Grid item>
@@ -61,7 +61,7 @@ const CustomAppBar = (props) => {
                         >
                           <Typography
                             align="left"
-                            sx={{ color: buttonClickFill }}
+                            sx={{ color: blue40 }}
                             fontWeight="bold"
                             paddingTop={!props.mobileView ? 0 : 1}
                             fontSize={!props.mobileView ? 14 : 11}
@@ -72,7 +72,7 @@ const CustomAppBar = (props) => {
                           <Typography
                             align="left"
                             fontSize={!props.mobileView ? 14 : 11}
-                            sx={{ color: buttonClickFill }}
+                            sx={{ color: blue40 }}
                             fontWeight="bold"
                           >
                             {" "}
@@ -80,7 +80,7 @@ const CustomAppBar = (props) => {
                           </Typography>
                           <Typography
                             fontSize={10}
-                            sx={{ color: buttonClickFill, fontStyle: "italic" }}
+                            sx={{ color: blue40, fontStyle: "italic" }}
                           >
                             {" "}
                             Transforming data into solutions for South Carolina
@@ -111,7 +111,7 @@ const CustomAppBar = (props) => {
                                         <Typography
                                           sx={{
                                             fontSize: 14,
-                                            color: buttonClickFill,
+                                            color: blue40,
                                           }}
                                         >
                                           {link.name}
@@ -136,9 +136,9 @@ const CustomAppBar = (props) => {
                                 variant={!searchOpen ? "outlined" : "contained"}
                                 sx={{
                                   backgroundColor: !searchOpen
-                                    ? white
-                                    : buttonFill,
-                                  borderColor: buttonFill,
+                                    ? white10
+                                    : blue20,
+                                  borderColor: blue20,
                                 }}
                               >
                                 <SearchIcon />

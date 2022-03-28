@@ -1,6 +1,6 @@
-import { Button, Box, Paper, Grid, Typography, TextField } from "@mui/material";
+import { Paper, Grid, Typography, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { buttonFill, buttonText, white } from "../data/Globals";
+import { white20, white10 } from "../data/Globals";
 import { CustomButton } from "./MenuButton";
 
 const styles = {
@@ -30,11 +30,7 @@ const SearchBox = (props) => {
         width="100%"
       >
         <Grid item width={() => widthFunc()}>
-          <Typography
-            fontWeight="bold"
-            variant="h5"
-            style={{ color: buttonText }}
-          >
+          <Typography fontWeight="bold" variant="h5" style={{ color: white20 }}>
             Providing independent research, analysis, and resources to
             facilitate informed policy decisions and adminstration of services
           </Typography>
@@ -54,7 +50,7 @@ const SearchBox = (props) => {
                     Search rfa.sc.gov
                   </Typography>
                 }
-                sx={{ backgroundColor: white, width: "100%" }}
+                sx={{ backgroundColor: white10, width: "100%" }}
                 variant="outlined"
               />
             </Grid>

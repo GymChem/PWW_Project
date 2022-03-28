@@ -1,7 +1,7 @@
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Fab, Typography, Grid, Button } from "@mui/material";
 import { useEffect, useState } from "react";
-import { buttonFill } from "../data/Globals";
+import { blue20 } from "../data/Globals";
 
 const ScrollToTop = (props) => {
   const [show, setShow] = useState(props.showBelow ? false : true);
@@ -49,7 +49,7 @@ const ScrollToTop = (props) => {
               onClick={handleClick}
               sx={{
                 zIndex: 2,
-                backgroundColor: buttonFill + "4D",
+                backgroundColor: blue20 + "4D",
                 position: "fixed",
                 bottom: "8vh",
                 "&hover, &.Mui-focusVisible": {
@@ -58,7 +58,7 @@ const ScrollToTop = (props) => {
                 right: "5%",
               }}
             >
-              <KeyboardArrowUpIcon sx={{ color: buttonFill }} />
+              <KeyboardArrowUpIcon sx={{ color: blue20 }} />
             </Fab>
           </Grid>
         </Grid>

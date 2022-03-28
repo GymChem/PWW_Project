@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { links } from "../data/TestData";
-import { linkColor, headerColor } from "../data/Globals";
+import { blue10, blue50 } from "../data/Globals";
 import { NavLink } from "react-router-dom";
 import classes from "../UI/Links.module.css";
 
@@ -18,13 +18,13 @@ const PopularLinks = (props) => {
             align="left"
             variant="h4"
             fontWeight="bold"
-            sx={{ color: headerColor, paddingTop: 1.5 }}
+            sx={{ color: blue50, paddingTop: 1.5 }}
           >
             POPULAR SERVICES AND LINKS
           </Typography>
         </Grid>
         <Grid item width="100%">
-          <Box style={{ backgroundColor: headerColor, height: 6 }} />
+          <Box style={{ backgroundColor: blue50, height: 6 }} />
         </Grid>
         <Grid item>
           <Grid
@@ -42,10 +42,10 @@ const PopularLinks = (props) => {
                   paddingTop={2}
                   paddingBottom={1}
                   paddingRight={2}
-                  color={linkColor}
+                  color={blue10}
                 >
                   <NavLink to={link.link} className={classes.navlink}>
-                    <Typography color={linkColor} align="left">
+                    <Typography color={blue10} align="left">
                       {link.linkName}
                     </Typography>
                   </NavLink>

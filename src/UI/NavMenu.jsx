@@ -12,12 +12,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { mainNav, allNavOptions } from "../data/TestData";
 import { NavLink } from "react-router-dom";
-import {
-  headerColor,
-  goldHighlight,
-  lightBlack,
-  offWhite,
-} from "../data/Globals";
+import { blue50, gold30, grey90, white30 } from "../data/Globals";
 import classes from "../UI/Links.module.css";
 
 const MyList = (props) => {
@@ -31,7 +26,7 @@ const MyList = (props) => {
       >
         <Grid
           item
-          sx={{ backgroundColor: offWhite }}
+          sx={{ backgroundColor: white30 }}
           sx={{ width: !props.mobileView ? "fit-content" : "100%" }}
         >
           <Grid
@@ -42,11 +37,11 @@ const MyList = (props) => {
           >
             {mainNav.map((nav, ind) => {
               return (
-                <Grid item key={ind} color={headerColor}>
+                <Grid item key={ind} color={blue50}>
                   <ListItem>
                     <NavLink className={classes.navlink} to={nav.link}>
                       <Typography
-                        color={lightBlack}
+                        color={grey90}
                         fontWeight="bold"
                         align="center"
                         variant="h6"
@@ -77,7 +72,7 @@ const MyList = (props) => {
                       direction="column"
                       alignItems="flex-start"
                       sx={{ minWidth: "fit-content" }}
-                      color={headerColor}
+                      color={blue50}
                     >
                       <NavLink
                         to={navSection.mainLink}
@@ -85,7 +80,7 @@ const MyList = (props) => {
                       >
                         <Typography
                           align="left"
-                          color={headerColor}
+                          color={blue50}
                           fontWeight="bold"
                         >
                           {navSection.title}
@@ -93,7 +88,7 @@ const MyList = (props) => {
                       </NavLink>
                       <Box
                         style={{
-                          backgroundColor: goldHighlight,
+                          backgroundColor: gold30,
                           height: 4,
                           width: "15%",
                           marginBottom: 8,
@@ -106,7 +101,7 @@ const MyList = (props) => {
                               to={item.subLink}
                               className={classes.navlink}
                             >
-                              <Typography align="left" color={lightBlack}>
+                              <Typography align="left" color={grey90}>
                                 {item.subtitle}
                               </Typography>
                             </NavLink>
@@ -133,7 +128,7 @@ const MyList = (props) => {
                         >
                           <Typography
                             align="left"
-                            color={headerColor}
+                            color={blue50}
                             fontWeight="bold"
                           >
                             {navSection.title}
@@ -149,7 +144,7 @@ const MyList = (props) => {
                                   to={item.subLink}
                                   className={classes.navlink}
                                 >
-                                  <Typography align="left" color={lightBlack}>
+                                  <Typography align="left" color={grey90}>
                                     {item.subtitle}
                                   </Typography>
                                 </NavLink>

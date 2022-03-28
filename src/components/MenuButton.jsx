@@ -1,12 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import {
-  buttonHoverFill,
-  buttonClickFill,
-  buttonFill,
-  buttonText,
-} from "../data/Globals";
+import { blue30, blue40, blue20, white20 } from "../data/Globals";
 
 export const CustomButton = (props) => {
   return (
@@ -15,14 +10,14 @@ export const CustomButton = (props) => {
       size={props.size}
       aria-label={props.ariaLabel}
       sx={{
-        backgroundColor: buttonFill,
-        color: buttonText,
+        backgroundColor: blue20,
+        color: white20,
         mr: 2,
         "&:hover": {
-          backgroundColor: buttonHoverFill,
+          backgroundColor: blue30,
         },
         "&:active": {
-          backgroundColor: buttonClickFill,
+          backgroundColor: blue40,
         },
       }}
     >
@@ -44,15 +39,15 @@ const MenuButton = (props) => {
       aria-label="Open Nav Drawer"
       sx={{
         height: 65,
-        backgroundColor: buttonFill,
-        color: buttonText,
+        backgroundColor: blue20,
+        color: white20,
         flexDirection: "column",
         mr: 2,
         "&:hover": {
-          backgroundColor: buttonHoverFill,
+          backgroundColor: blue30,
         },
         "&:click": {
-          backgroundColor: buttonClickFill,
+          backgroundColor: blue40,
         },
       }}
     >

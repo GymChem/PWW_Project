@@ -1,6 +1,6 @@
 import { AppBar, Container, Grid, Typography, Avatar } from "@mui/material";
 import { locations, bottomLinks } from "../data/TestData";
-import { headerColor, white } from "../data/Globals";
+import { blue50, white10 } from "../data/Globals";
 import { NavLink } from "react-router-dom";
 import classes from "../UI/Links.module.css";
 
@@ -11,7 +11,7 @@ const Footer = (props) => {
       sx={{
         top: "auto",
         bottom: 0,
-        backgroundColor: headerColor,
+        backgroundColor: blue50,
         padding: 2,
       }}
     >
@@ -48,7 +48,7 @@ const Footer = (props) => {
                 return (
                   <Grid item key={ind}>
                     <NavLink className={classes.navlink} to={link.link}>
-                      <Typography align="left" color={white}>
+                      <Typography align="left" color={white10}>
                         {link.name}
                       </Typography>
                     </NavLink>
