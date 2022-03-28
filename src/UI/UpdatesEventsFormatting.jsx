@@ -6,7 +6,7 @@ import PopularLinks from "../components/PopularLinks";
 import { useRef } from "react";
 import { blue20 } from "../data/Globals";
 
-const BottomHalfPage = (props) => {
+const UpdatesEventsFormatting = (props) => {
   const scrollEndRef = useRef(null);
   return (
     <>
@@ -49,4 +49,4 @@ const BottomHalfPage = (props) => {
     </>
   );
 };
-export default BottomHalfPage;
+export default UpdatesEventsFormatting;

@@ -5,7 +5,7 @@ import { CustomButton } from "./MenuButton";
 import classes from "../UI/Links.module.css";
 import { NavLink } from "react-router-dom";
 
-const RecentUpdates = (props) => {
+const RecentUpdates = () => {
   return (
     <Grid
       container
