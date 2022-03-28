@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { AppBar, Container, Grid, Typography, Avatar } from "@mui/material";
 import { locations, bottomLinks } from "../data/TestData";
 import { headerColor, white } from "../data/Globals";

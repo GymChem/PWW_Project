@@ -17,7 +17,10 @@ const SearchBox = (props) => {
     } else return "75%";
   };
   return (
-    <Paper style={styles.paperContainer}>
+    <Paper
+      style={styles.paperContainer}
+      ariaLabel="picture of domed government building"
+    >
       <Grid
         container
         direction="column"

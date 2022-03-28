@@ -1,6 +1,5 @@
 import {
   Box,
-  Drawer,
   List,
   ListItem,
   Typography,

@@ -1,11 +1,9 @@
-import { Button, Box, Grid, Typography, Link } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { updateList } from "../data/TestData";
 import {
   linkColor,
   headerColor,
   goldHighlight,
-  buttonFill,
-  buttonText,
   white,
   darkGrey,
 } from "../data/Globals";

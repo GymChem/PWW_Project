@@ -6,7 +6,6 @@ import {
   Button,
   Typography,
   Avatar,
-  Link,
 } from "@mui/material";
 import * as React from "react";
 import { useState } from "react";
